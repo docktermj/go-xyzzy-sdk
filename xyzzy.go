@@ -4,18 +4,12 @@ package xyzzy
 #cgo CFLAGS: -g -Wall
 #include <stdlib.h>
 #include <stdio.h>
-#include "g2PluginInterface.h"
-#include "libg2.h"
-#include "libg2config.h"
-#include "libg2configmgr.h"
 #include "libg2diagnostic.h"
-#include "libg2hasher.h"
-#include "libg2product.h"
-#include "libg2ssadm.h"
 */
 import "C"
 import (
-	"fmt"
+  "fmt"
+  "unsafe"
 )
 
 // Values updated via "go install -ldflags" parameters.
@@ -40,9 +34,7 @@ func G2Diagnostic_getPhysicalCores() int {
 
 func main() {
 
-	physicalCores := G2Diagnostic_getPhysicalCores()
+  physicalCores := G2Diagnostic_getPhysicalCores()
+  fmt.Println("Physical cores %d", physicalCores)
 
-	fmt.Println("Physical cores %d", physicalCores)
-
-	regreet()
 }

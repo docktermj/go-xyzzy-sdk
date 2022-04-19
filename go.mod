@@ -1,3 +1,3 @@
-module github.com/docktermj/go-hello-world-module
+module github.com/docktermj/go-xyzzy-sdk
 
-go 1.17
+go 1.18

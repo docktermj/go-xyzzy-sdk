@@ -30,8 +30,104 @@ default: help
 # CGO_CFLAGS = -I$(MAKEFILE_DIRECTORY)lib
 # CGO_LDFLAGS = -L$(MAKEFILE_DIRECTORY)lib -llibg2diagnostic
 
-CGO_CFLAGS = -I/home/senzing/my-senzing/g2/sdk/c
-CGO_LDFLAGS = -L/home/senzing/my-senzing/g2/lib -lG2
+CGO_CFLAGS = \
+	-I/home/senzing/my-senzing/g2/sdk/c
+CGO_LDFLAGS = \
+	-L/home/senzing/my-senzing/g2/lib \
+	-L/home/senzing/my-senzing/g2/lib/debian \
+	-lanalytics \
+	-lboost_atomic \
+	-lboost_chrono \
+	-lboost_container \
+	-lboost_context \
+	-lboost_coroutine \
+	-lboost_date_time \
+	-lboost_filesystem \
+	-lboost_graph \
+	-lboost_iostreams \
+	-lboost_locale \
+	-lboost_log \
+	-lboost_log_setup \
+	-lboost_math_c99 \
+	-lboost_math_c99f \
+	-lboost_math_c99l \
+	-lboost_math_tr1 \
+	-lboost_math_tr1f \
+	-lboost_math_tr1l \
+	-lboost_prg_exec_monitor \
+	-lboost_program_options \
+	-lboost_random \
+	-lboost_regex \
+	-lboost_serialization \
+	-lboost_signals \
+	-lboost_system \
+	-lboost_thread \
+	-lboost_timer \
+	-lboost_type_erasure \
+	-lboost_wave \
+	-lboost_wserialization \
+	-lcrypto \
+	-ldb2plugin \
+	-leaexml2 \
+	-lG2 \
+	-lg2AddressComp \
+	-lg2AddressHasher \
+	-lg2CloseNames \
+	-lg2CompJavaScoreSet \
+	-lg2ConfigParseAddr \
+	-lg2DateComp \
+	-lg2DistinctFeatJava \
+	-lg2DLComp \
+	-lg2EFeatJava \
+	-lg2EmailComp \
+	-lg2ExactDomainMatchComp \
+	-lg2ExactMatchComp \
+	-lg2FeatBuilder \
+	-lg2FormatSSN \
+	-lg2GenericHasher \
+	-lg2GEOLOCComp \
+	-lg2GNRNameComp \
+	-lg2GroupAssociationComp \
+	-lG2Hasher \
+	-lg2IDHasher \
+	-lg2JVMPlugin \
+	-lg2NameHasher \
+	-lg2ParseDOB \
+	-lg2ParseEmail \
+	-lg2ParseGEOLOC \
+	-lg2ParseID \
+	-lg2ParseName \
+	-lg2ParsePhone \
+	-lg2PartialAddresses \
+	-lg2PartialDates \
+	-lg2PartialNames \
+	-lg2PhoneComp \
+	-lg2PhoneHasher \
+	-lG2SSAdm \
+	-lg2SSNComp \
+	-lg2STBHasher \
+	-lg2StdCountry \
+	-lg2StdJava \
+	-lg2StdTokenizeName \
+	-lg2StrictSubsetFelems \
+	-lg2StrictSubsetNormalizedFelems \
+	-lg2StrictSubsetTokens \
+	-lg2StringComp \
+	-licudata \
+	-licui18n \
+	-licuio \
+	-licutest \
+	-licutu \
+	-licuuc \
+	-lmariadbplugin \
+	-lmssqlplugin \
+	-lNameDataObject \
+	-lpostal \
+	-lpostgresqlplugin \
+	-lscoring \
+	-lSpaceTimeBoxStandardizer \
+	-lsqliteplugin \
+	-lssl
 
 # ---- Linux ------------------------------------------------------------------
 

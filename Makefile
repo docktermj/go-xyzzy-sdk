@@ -31,12 +31,11 @@ default: help
 # CGO_LDFLAGS = -L$(MAKEFILE_DIRECTORY)lib -llibg2diagnostic
 
 CGO_CFLAGS = -I/home/senzing/my-senzing/g2/sdk/c
-CGO_LDFLAGS = -L$/home/senzing/my-senzing/g2/lib
+CGO_LDFLAGS = -L/home/senzing/my-senzing/g2/lib -lG2
 
 # ---- Linux ------------------------------------------------------------------
 
 target/linux/go-hello-xyzzy-dynamic: 
-	echo $(CGO_LDFLAGS)
 	GOOS=linux GOARCH=amd64 \
 		go build \
 			-a \

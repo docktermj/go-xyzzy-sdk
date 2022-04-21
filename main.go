@@ -1,4 +1,4 @@
-package xyzzy
+package main
 
 /*
 #include <stdlib.h>

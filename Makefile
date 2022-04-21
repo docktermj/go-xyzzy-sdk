@@ -27,8 +27,11 @@ default: help
 
 .EXPORT_ALL_VARIABLES:
 
-CGO_CFLAGS = -I$(MAKEFILE_DIRECTORY)lib
-CGO_LDFLAGS = -L$(MAKEFILE_DIRECTORY)lib -llibg2diagnostic
+# CGO_CFLAGS = -I$(MAKEFILE_DIRECTORY)lib
+# CGO_LDFLAGS = -L$(MAKEFILE_DIRECTORY)lib -llibg2diagnostic
+
+CGO_CFLAGS = -I/home/senzing/my-senzing/g2/sdk/c
+CGO_LDFLAGS = -L$/home/senzing/my-senzing/g2/lib
 
 # ---- Linux ------------------------------------------------------------------
 

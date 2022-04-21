@@ -1,15 +1,16 @@
 package xyzzy
 
 /*
-#cgo CFLAGS: -g -Wall
 #include <stdlib.h>
 #include <stdio.h>
 #include "libg2diagnostic.h"
+#cgo CFLAGS: -g -Wall
+#cgo LDFLAGS: -shared
 */
 import "C"
 import (
   "fmt"
-  "unsafe"
+//  "unsafe"
 )
 
 // Values updated via "go install -ldflags" parameters.
@@ -22,9 +23,9 @@ var buildIteration string = "0"
 // libg2diagnostic.h
 // ----------------------------------------------------------------------------
 
-func G2Diagnostic_getPhysicalCores() int {
+func G2Diagnostic_getPhysicalCoresX() int {
     result := C.G2Diagnostic_getPhysicalCores()
-    return result
+    return int(result)
 }
 
 // ----------------------------------------------------------------------------
@@ -34,7 +35,7 @@ func G2Diagnostic_getPhysicalCores() int {
 
 func main() {
 
-  physicalCores := G2Diagnostic_getPhysicalCores()
+  physicalCores := G2Diagnostic_getPhysicalCoresX()
   fmt.Println("Physical cores %d", physicalCores)
 
 }

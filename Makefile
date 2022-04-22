@@ -66,7 +66,6 @@ CGO_LDFLAGS = \
 	-lboost_type_erasure \
 	-lboost_wave \
 	-lboost_wserialization \
-	-lcrypto \
 	-ldb2plugin \
 	-leaexml2 \
 	-lG2 \
@@ -127,7 +126,8 @@ CGO_LDFLAGS = \
 	-lscoring \
 	-lSpaceTimeBoxStandardizer \
 	-lsqliteplugin \
-	-lssl
+	/home/senzing/my-senzing/g2/lib/debian/libssl.so.10 \
+	/home/senzing/my-senzing/g2/lib/debian/libcrypto.so.10	
 
 # ---- Linux ------------------------------------------------------------------
 

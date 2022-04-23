@@ -15,15 +15,24 @@
 
 1. Follow steps in [clone-repository](https://github.com/docktermj/KnowledgeBase/blob/master/HowTo/clone-repository.md) to install the Git repository.
 
-### Test
+### Build
 
-1. Perform unit tests.
+1. Build code.
    Example:
 
     ```console
     cd ${GIT_REPOSITORY_DIR}
+    make build
+    ```
 
-    go test
+### Run
+
+1. Build code.
+   Example:
+
+    ```console
+    cd ${GIT_REPOSITORY_DIR}/target/linux
+    ./go-hello-xyzzy-dynamic
     ```
 
 ## References

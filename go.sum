@@ -1,0 +1,6 @@
+github.com/docktermj/xyzzygoapi v0.0.0-20220422025205-7b0d483341d9 h1:chHTIrMvxpfIK0FfC4jUWWHq1OArWLRSWVsMUwJUI0g=
+github.com/docktermj/xyzzygoapi v0.0.0-20220422025205-7b0d483341d9/go.mod h1:IiT73GDKvwzEzICY1720IaxN9Y5GMMhVtN+kfjDdyrc=
+github.com/docktermj/xyzzygoapi v0.0.0-20220423201128-a686caf32eec h1:z6Os0k1/6+N3xLUJvbO5O2bX6yvatOJczowgH6Vkuw4=
+github.com/docktermj/xyzzygoapi v0.0.0-20220423201128-a686caf32eec/go.mod h1:JVJLizFnWC1cU2J0y5xJdDvz/mSUshxReVVEPwZvGAU=
+github.com/jstemmer/go-junit-report v1.0.0 h1:8X1gzZpR+nVQLAht+L/foqOeX2l9DTZoaIPbEQHxsds=
+github.com/jstemmer/go-junit-report v1.0.0/go.mod h1:Brl9GWCQeLvo8nXZwPNNblvFj/XSXhF0NWZEnDohbsk=

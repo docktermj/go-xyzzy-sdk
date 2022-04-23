@@ -3,14 +3,12 @@ package main
 /*
 #include <stdlib.h>
 #include <stdio.h>
-#include "libg2diagnostic.h"
-#cgo CFLAGS: -g -Wall
-#cgo LDFLAGS: -shared
 */
-import "C"
 import (
-  "fmt"
-//  "unsafe"
+	"context"
+	"fmt"
+
+	"github.com/docktermj/xyzzygoapi/g2diagnostic"
 )
 
 // Values updated via "go install -ldflags" parameters.
@@ -20,22 +18,31 @@ var buildVersion string = "0.0.5"
 var buildIteration string = "0"
 
 // ----------------------------------------------------------------------------
-// libg2diagnostic.h
-// ----------------------------------------------------------------------------
-
-func G2Diagnostic_getPhysicalCoresX() int {
-    result := C.G2Diagnostic_getPhysicalCores()
-    return int(result)
-}
-
-// ----------------------------------------------------------------------------
 // main
 // ----------------------------------------------------------------------------
 
-
 func main() {
 
-  physicalCores := G2Diagnostic_getPhysicalCoresX()
-  fmt.Println("Physical cores %d", physicalCores)
+	// Get Xyzzy's G2diagnostic object.
+
+	g2diagnostic := g2diagnostic.G2diagnosticImpl{}
+
+	// Create context.
+
+	ctx := context.TODO()
+
+	// Call Xyzzy G2diagnostic methods.
+
+	availableMemory, _ := g2diagnostic.GetAvailableMemory(ctx)
+	logicalCores, _ := g2diagnostic.GetLogicalCores(ctx)
+	physicalCores, _ := g2diagnostic.GetPhysicalCores(ctx)
+	totalSystemMemory, _ := g2diagnostic.GetTotalSystemMemory(ctx)
+
+	// Print results.
+
+	fmt.Println("Available memory:", availableMemory)
+	fmt.Println("    Total memory:", totalSystemMemory)
+	fmt.Println("  Physical cores:", physicalCores)
+	fmt.Println("   Logical cores:", logicalCores)
 
 }
